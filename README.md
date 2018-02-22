@@ -5,9 +5,10 @@ an API to browse XKCD comics.
 
 ## Starting the lab
 
-To start the lab, you must follow this [GitHub Classroom link](). This
-will create a private repository for you using our classroom site. We
-will only grade repositories created and submitted this way.
+To start the lab, you must follow this [GitHub Classroom
+link](https://classroom.github.com/a/qC4peA9p). This will create a
+private repository for you using our classroom site. We will only
+grade repositories created and submitted this way.
 
 Once you "Accept the assignment" on GitHub Classroom, it will create a
 new repository for you and grant you access to it on GitHub. In order
@@ -63,7 +64,7 @@ steps of 0.5, does not show the current rating, and uses red stars.
 
 When you're done, it should look like this:
 
-![rating)(images/rating.png)
+![rating](images/rating.png)
 
 ## Link to GitHub repository
 
