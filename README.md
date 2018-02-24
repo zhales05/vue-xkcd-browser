@@ -39,25 +39,12 @@ show the current date and time after or below the author's name.
 ### Star rating
 
 Add the ability for people to rate the cartoon. Display the average
-rating accumulated so far.
+rating accumulated so far. The average should be separate for each cartoon.
 
 Use this [star rating library for
-Vue](https://github.com/craigh411/vue-star-rating). Use the CDN method
-for loading the libary:
+Vue](https://github.com/craigh411/vue-star-rating).
 
-```
-<script src="https://unpkg.com/vue-star-rating/dist/star-rating.min.js"></script>
-```
-
-
-along with the suggestion for creating a Vue component:
-
-```
-Vue.component('star-rating', VueStarRating.default);
-```
-
-Once this is done, you just need to create a star rating element in
-`index.html` and you need to create the appropriate backing code in `script.js`.
+See the Wiki for help.
 
 Change the options on the star rating library so that it increments in
 steps of 0.5, does not show the current rating, and uses red stars.
