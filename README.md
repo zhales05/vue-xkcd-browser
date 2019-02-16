@@ -17,8 +17,8 @@ laptop or other working environment.
 
 ## Tutorial
 
-Use the [tutorial](https://github.com/BYU-CS260-Winter-2018/lab3/wiki)
-in the Wiki to create the application. This will help you create most
+Use the [tutorial](https://github.com/BYU-CS-260-Winter-2019/lab3/blob/master/TUTORIAL.md)
+to create the application. This will help you create most
 of the functionality. Once you are done, your lab should look like this:
 
 ![xkcd](images/xkcd.png)

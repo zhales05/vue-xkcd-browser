@@ -372,4 +372,4 @@ This method needs to add a new array to the `comments` object whenever the first
 
 Once this is done, we can use standard JavaScript to push the new comment into the array.
 
-You should now have comments working, with separate comments for each comment.
+You should now have comments working, with separate comments for each comic. Note, the comments are not saved when you refresh the page. Later we'll use a server and a database to store important state.
