@@ -6,7 +6,7 @@ an API to browse XKCD comics.
 ## Starting the lab
 
 To start the lab, you must follow this [GitHub Classroom
-link](https://classroom.github.com/a/qC4peA9p). This will create a
+link](https://classroom.github.com/a/F2ieX9yy). This will create a
 private repository for you using our classroom site. We will only
 grade repositories created and submitted this way.
 
