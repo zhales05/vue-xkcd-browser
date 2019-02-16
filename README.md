@@ -34,7 +34,7 @@ Add buttons to navigate to the first comic and the last comic.
 ### Date and time for comments
 
 Add the current date and time to every comment that is created, then
-show the current date and time after or below the author's name.
+show the current date and time after or below the author's name. You may want to use the [moment](https://momentjs.com/) to  help you format the date and time.
 
 ### Star rating
 
@@ -44,7 +44,7 @@ rating accumulated so far. The average should be separate for each cartoon.
 Use this [star rating library for
 Vue](https://github.com/craigh411/vue-star-rating).
 
-See the Wiki for help.
+Use this [star ratings tutorial](/STAR-RATINGS.md) for help.
 
 Change the options on the star rating library so that it increments in
 steps of 0.5, does not show the current rating, and uses red stars.
