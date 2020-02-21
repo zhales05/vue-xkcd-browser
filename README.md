@@ -1,4 +1,4 @@
-# Lab 3: Creating a Vue XKCD Browser
+# Vue XKCD Browser
 
 In this assignment, you will use Vue to build an application that uses
 an API to browse XKCD comics.
