@@ -6,7 +6,7 @@ an API to browse XKCD comics.
 ## Starting the lab
 
 To start the lab, you must follow this [GitHub Classroom
-link](https://classroom.github.com/a/F2ieX9yy). This will create a
+link](TBD). This will create a
 private repository for you using our classroom site. We will only
 grade repositories created and submitted this way.
 
@@ -34,7 +34,7 @@ Add buttons to navigate to the first comic and the last comic.
 ### Date and time for comments
 
 Add the current date and time to every comment that is created, then
-show the current date and time after or below the author's name. You may want to use the [moment](https://momentjs.com/) to  help you format the date and time.
+show the current date and time after or below the author's name. You may want to use the [moment](https://momentjs.com/) library to  help you format the date and time.
 
 ### Star rating
 
