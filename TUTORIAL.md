@@ -26,7 +26,13 @@ let app = new Vue({
   },
   methods: {
     xkcd() {
-      axios.get('https://xkcd.now.sh/' + this.number)
+      let url = 'https://xkcd.now.sh/?comic=';
+      if (this.number === '') {
+        url += 'latest';
+      } else {
+        url += this.number;
+      }
+      axios.get(url)
         .then(response => {
           this.current = response.data;
           return true;
@@ -41,9 +47,13 @@ let app = new Vue({
 
 You should be familiar with most of this from our prior Vue tutorials. We create an instance of Vue, tell it to control the DOM inside the tag with the `#app` CSS id, and setup some variables.
 
-We also create a method, called `xkcd` to fetch the comic. This method uses the axios API, JavaScript Promises, and the new function syntax in ES6.
+We also create a method, called `xkcd` to fetch the comic. The `xkcd` API
+uses URLs of the form `https://xkcd.now.sh/?comic=latest` or `https://xkcd.now.sh/?comic=number`, where `number` is a valid comic number. A variable
+called `this.number` keeps track of the comic number we are browsing.
 
-The important thing to know here is that `axios.get` returns a Promise, which gets resolved when the fetch completes. When it does, the code you place in `then` gets executed. This is what it means to have your JavaScript execute asynchronously. Anything placed after `axios.get` (after the final semicolon) is executed immediately after the call to `get`. The code inside `then` is executed only after the resource is actually fetched.
+This method uses the axios library, JavaScript Promises, and the new function syntax in ES6.
+
+One important thing to know is that `axios.get` returns a Promise, which gets resolved when the fetch completes. When it does, the code you place in `then` gets executed. This is what it means to have your JavaScript execute asynchronously. Anything placed after `axios.get` (after the final semicolon) is executed immediately after the call to `get`. The code inside `then` is executed only after the resource is actually fetched.
 
 Once the `get` returns, we execute a function inside of `then`. This function takes one argument, `response`, and calls `response.json()` to convert it to JSON. Functions in a Promise chain must always return. The value that is returned is the parameters for the next `then` statement. Notice the second `then` also calls a function, which takes one argument, `json`, and uses this to update the value of `current`. This is called [Promise chaining](https://javascript.info/promise-chaining).
 
@@ -52,7 +62,13 @@ If you prefer, you can instead use the `async/await` syntax. Let's change our `x
 ```
 async xkcd() {
   try {
-    const response = await axios.get('https://xkcd.now.sh/' + this.number);
+    let url = 'https://xkcd.now.sh/?comic=';
+    if (this.number === '') {
+      url += 'latest';
+    } else {
+      url += this.number;
+    }
+    const response = await axios.get(url);
     this.current = response.data;
   } catch (error) {
     console.log(error);
@@ -116,7 +132,13 @@ Second, modify the `xkcd` function to set and clear this variable:
     async xkcd() {
       try {
         this.loading = true;
-        const response = await axios.get('https://xkcd.now.sh/' + this.number);
+        let url = 'https://xkcd.now.sh/?comic=';
+        if (this.number === '') {
+          url += 'latest';
+        } else {
+          url += this.number;
+        }
+        const response = await axios.get(url);
         this.current = response.data;
         this.loading = false;
       } catch (error) {
@@ -162,7 +184,13 @@ We're also going to make a small change to the `xkcd` method in `script.js`, to 
     async xkcd() {
       try {
         this.loading = true;
-        const response = await axios.get('https://xkcd.now.sh/' + this.number);
+        let url = 'https://xkcd.now.sh/?comic=';
+        if (this.number === '') {
+          url += 'latest';
+        } else {
+          url += this.number;
+        }
+        const response = await axios.get(url);
         this.current = response.data;
         this.loading = false;
         this.number = response.data.num;
@@ -297,7 +325,7 @@ the latest comic. This is because an error occurs when loading the comic (view t
 
 ```
       }).catch(error => {
-	this.number = this.max;
+	       this.number = this.max;
       });
 ```
 We'll just load the comic with the largest available number.
