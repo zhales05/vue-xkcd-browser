@@ -3,7 +3,7 @@
 Use this [star rating library for Vue](https://github.com/craigh411/vue-star-rating). Use the CDN method for loading the libary by putting this in `index.html`:
 
 ```
-<script src="https://unpkg.com/vue-star-rating/dist/star-rating.min.js"></script>
+<script src="https://unpkg.com/vue-star-rating@next/dist/VueStarRating.umd.min.js"></script>
 ```
 
 In addition, you will want to create a global Vue component at the top of `script.js`:
