@@ -9,7 +9,7 @@
 
 <body>
   <h1>XKCD Browser</h1>
-  
+
   <div id="app">
     <div v-if="loading">
       <p>Loading...</p>
@@ -26,12 +26,8 @@
       <img v-bind:src="current.img" v-bind:alt="current.alt">
       <p>{{current.alt}}</p>
       <p><i>#{{current.num}}, drawn on {{current.day}} {{month}} {{current.year}}</i></p>
-      <star-rating
-       @rating-selected ="setRating"
-       v-bind:increment="0.5"
-       active-color="#f00"
-       v-bind:show-rating="false"
-      ></star-rating>
+      <star-rating @rating-selected="setRating" v-bind:increment="0.5" active-color="#f00" v-bind:show-rating="false">
+      </star-rating>
       <p>Average Rating: {{ratingAverage}}</p>
 
       <h3>Add a Comment</h3>
@@ -55,11 +51,12 @@
   </footer>
   <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
   <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-  <script src="https://unpkg.com/vue-star-rating/dist/VueStarRating.umd.min.js"></script>  
+  <script src="https://unpkg.com/vue-star-rating/dist/VueStarRating.umd.min.js"></script>
   <script src="/script.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js" integrity="sha256-4iQZ6BVL4qNKlQ27TExEhBN1HFPvAvAMbFavKKosSWQ=" crossorigin="anonymous"></script>
- <!-- <script src="https://unpkg.com/vue-star-rating@1.7.0/dist/VueStarRating.umd.min.js"></script>-->
-  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"
+    integrity="sha256-4iQZ6BVL4qNKlQ27TExEhBN1HFPvAvAMbFavKKosSWQ=" crossorigin="anonymous"></script>
+  <!-- <script src="https://unpkg.com/vue-star-rating@1.7.0/dist/VueStarRating.umd.min.js"></script>-->
+
 
 </body>
 
